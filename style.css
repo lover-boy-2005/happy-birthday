@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #2b2b2b;
+  color: rgb(255, 255, 255);
+  font-size: 6vw;
+  font-family: "Darker Grotesque", sans-serif;
+  transition: background-image 0.7s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  backdrop-filter: blur(3px);
+}
+
+body .typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body .typing-container #feature-text {
+  margin-left: 4px;
+}
+
+body .typing-container .input-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 6vw; /* Adjust height relative to the font size */
+  background-color: white;
+  margin-left: 4px;
+  animation: blink 0.6s linear infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  text-align: center;
+  z-index: 10;
+  font-size: 8vw;
+}
+
+.birthday-heading {
+  font-weight: bold;
+  color: #f31212;
+}
+
+#feature-text {
+  font-size: 8vw;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.static-text {
+  font-weight: bold;
+  color: #f39c12;
+  font-size: 1.2em;
+  text-shadow: 0 0 10px #f39c12;
+  padding: 2px 6px;
+}
+.static-text-letter{
+  position: fixed;
+  font-weight: bold;
+  color: #f39c12;
+  font-size: 1.2em;
+  text-shadow: 0 0 10px #f39c12;
+  padding: 2px 6px;
+}
+
+.container {
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 5vw;
+}
+
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+/* Reveal class */
+.reveal {
+  opacity: 1;
+}
